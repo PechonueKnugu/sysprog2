@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+project(Hello_Project)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+add_library(function STATIC ../function.cpp)
+add_executable(Hello_Project ../main.cpp)
+target_link_libraries(Hello_Project function)
